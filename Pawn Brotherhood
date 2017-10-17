@@ -1,0 +1,23 @@
+
+
+def safe_pawns(pawns):
+    isprotected = 0
+    for pawn in pawns: 
+        pawntotest = list(pawn)
+        print (pawntotest)
+        print (int(pawntotest[1])-1)
+        print("".join(pawntotest))
+        if pawn == "d4":
+            for pawn in pawns: 
+                if pawn == "c3":
+                    print (pawn)
+                    isprotected +=1
+                if pawn == "e3":
+                    print (pawn)
+                    isprotected +=1
+    return isprotected
+
+if __name__ == '__main__':
+    #These "asserts" using only for self-checking and not necessary for auto-testing
+    assert safe_pawns({"b4", "d4", "f4", "c3", "e3", "g5", "d2"}) == 6
+    assert safe_pawns({"b4", "c4", "d4", "e4", "f4", "g4", "e5"}) == 1
