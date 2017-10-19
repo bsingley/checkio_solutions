@@ -90,7 +90,7 @@ def recall_password(cipher_grille, ciphered_password):
         col = [[row[y] for row in cipher_grille] for y in range(4)]
         print 'col =        ', col
         #this line changes the cipher grille for the next round through the loop
-        #why isn't it just cipher_grille = col? 
+        #but the grille isn't quite right, needs to be reverse inside each new row
         cipher_grille = [[row[y] for y in range(3,-1,-1)] for row in col]
         print 'cipher_gril= ',cipher_grille
     #print ("".join(result))
