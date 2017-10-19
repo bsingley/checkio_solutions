@@ -12,8 +12,9 @@ def days_diff(date1, date2):
         Find absolute diff in days between dates
     """
 
-    first = date(date1[0],date1[1],date1[2])
-    second = date(date2[0],date2[1],date2[2])
+
+    first = date(*date1)
+    second = date(*date2)
 
     print abs(first - second).days
 
